@@ -1,0 +1,126 @@
+<html>
+
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.2/css/bulma.min.css">
+</head>
+<h1 class="title" align="center">Creating a webpage with Laravel and Bulma</h1>
+<div class="container is-fluid">
+    <div class="notification">
+        <p>Laravel includes many features that addresses the stigma around "messy" PHP code.
+            We will learn how to use routes and design a clean and
+            efficient form for the uesr to submit information.
+        </p>
+    </div>
+
+</div>
+<br>
+<h2 class="subtitle" align="center">Creating your first form</h2>
+<div class="box has-text-centered">
+    <div class="container is-fluid">
+        <div class="notification">
+            <p>Laravel makes it extremely easy for developers to create forms.
+                After you have installed Laravel with the necessary dependancies, go
+                ahead and create a 'contact.blade.php' file in /resources/views.
+            </p><br>
+            <img src="https://i.imgur.com/0l4SqGT.png">
+        </div>
+    </div>
+
+    <div class="container is-fluid">
+        <div class="notification">
+            <p>
+                One reason why Laravel is so popular is because it handles routing
+                with ease. Go ahead and create controllers for your form in /routes/web.php.
+                The first parameter is the URL used to acccess the page, and the second
+                is the controller it will use. (Eg. /contact, uses => "Controller").
+                A third field can also be used to specify an alias for the controller,
+                as shown below as 'contact.store' for better readability.
+            </p><br>
+            <img src="https://i.imgur.com/U9uHJHw.png" alt="">
+        </div>
+    </div>
+
+    <div class="container is-fluid">
+        <div class="notification">
+            <p>Go back to your contact.blade.php file. This is where the front end is done.
+                Create your HTML boilerplate as usual, and then include the Bulma CDN link
+                for CSS styling.
+            </p><br>
+            <img src="https://i.imgur.com/l2ZDzRx.png" alt="">
+        </div>
+    </div>
+    <div class="container is-fluid">
+        <div class="notification">
+            <p>From here, you are now free to create your own HTML form as usual. The only difference
+                is that you will wrap each form element with div tags, and include the respective
+                Bulma class for that element. (eg. 'div class="field", div class="radio"', etc).
+            </p><br>
+            <img src="https://i.imgur.com/YihxMij.png" alt="">
+        </div>
+    </div>
+    <div class="container is-fluid">
+        <div class="notification">
+            <p>Making use of Laravel's MVC (Model View Controller) infrastructure, we can view what
+                variables were submitted by surrounding your form elements with a routing action element
+                as seen below. Here, the alias is used for better legibility. The csrf_field() method
+                allows for you to see whether or not your variables have actually been saved.
+            </p><br>
+            <img src="https://i.imgur.com/45IRmRS.png" alt="">
+        </div>
+    </div>
+
+    <div class="container is-fluid">
+        <div class="notification">
+            <p>Another advantage of Laravel is that it uses Composer, a dependancy manager for PHP.
+                It also supports Artisan commands, making this process painfully easy and seamless.
+                Open your command line (or Git Bash on Windows) within your project folder
+                and run the following command:
+                <br><br><code>$ php artisan make:controller ContactMessageController</code><br><br>
+
+            </p><br>
+            <img src="https://i.imgur.com/hN9UIiG.png" alt="">
+        </div>
+    </div>
+    <div class="container is-fluid">
+        <div class="notification">
+            <p> You will now notice that there is a ContactMessageController in /http/Controllers.
+                This is where your controllers are stored. <br>
+                *Note that this step can also be done with a text editor such as VSCode if
+                configured properly.</p><br>
+            <img src="https://i.imgur.com/7eNk7EL.png" alt="">
+        </div>
+    </div>
+    <div class="container is-fluid">
+        <div class="notification">
+            <p>We will now create the two main controllers for the routes we defined
+                previously. The return view() method returns your main page (or view),
+                and the dd() method dumps your submitted variables, and then dies
+                (hence the name 'dd'). Insert the following code in your new
+                ContactMessageController file.
+            </p><br>
+            <img src="https://i.imgur.com/SCN27YZ.png" alt="">
+        </div>
+    </div>
+    <div class="container is-fluid">
+        <div class="notification">
+            <p>By now, you should have noticed that all three attributes of the MVC Model
+                have been satisfied. Go ahead and access your page via localhost/contact
+                in your web browser.
+
+            </p><br>
+            <img src="https://i.imgur.com/suMUaGo.png" alt="">
+        </div>
+    </div>
+    <div class="container is-fluid">
+        <div class="notification">
+            <p>Try filling in the fields of your form and clicking on your submit
+                button. If done correctly, you should be able to see your variables
+                mapped correctly. You can use these variables in any which way you
+                like. Congratuations on creating your first webpage with Laravel!
+            </p><br>
+            <img src="https://i.imgur.com/tFUgKJA.png" alt="">
+        </div>
+    </div>
+</div>
+
+</html>
